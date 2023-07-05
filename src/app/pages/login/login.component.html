@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+<div class="text-center" *ngIf="isLogged; else loggedOut">
+
+</div>
+
+<ng-template #loggedOut>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="container-main">
+          <div class="profile-image">
+            <img src="../../../assets/img/profile.png" alt="Imagen de perfil">
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title text-center" style="color: #4835d4;">Iniciar Sesión</h3>
+              <form #f="ngForm" (ngSubmit)="onLogin()" novalidate >
+                <div class="form-group">
+                  <label for="nombre">Nombre de Usuario</label>
+                  <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre de Usuario"   [(ngModel)]="userName" required name="nombre">
+                </div>
+                <div class="form-group">
+                  <label for="contrasena">Contraseña</label>
+                  <input type="password" class="form-control" id="contrasena" placeholder="Ingresa tu contraseña"  [(ngModel)]="password" required  name="contrasena">
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Iniciar Sesión</button>
+                </div>
+              </form>
+              <div class="text-center mt-3">
+                <p>¿No tienes una cuenta? <a routerLink="/signup">Regístrate aquí</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

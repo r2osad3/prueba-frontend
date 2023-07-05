@@ -1,0 +1,48 @@
+<app-navbar></app-navbar>
+<div class="text-center" *ngIf="isLogged; else loggedOut">
+
+</div>
+
+
+<ng-template #loggedOut>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="container-main">
+        <div class="profile-image">
+          <img src="../../../assets/img/add-user.png" alt="Imagen de perfil">
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title text-center" style="color: #4835d4;">Registrate aquí</h3>
+            <form  #f="ngForm" (ngSubmit)="onRegister()" novalidate>
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre"  name="nombre"  [(ngModel)]="name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="nombreU">Nombre de Usuario</label>
+                <input type="text" class="form-control" id="nombreU" placeholder="Ingresa tu nombre de usuario"  name="nombreU"  [(ngModel)]="userName" required>
+              </div>
+
+              <div class="form-group">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" class="form-control" id="correo" placeholder="Ingresa tu correo electrónico"  name="correo"  [(ngModel)]="email" required>
+              </div>
+              <div class="form-group">
+                <label for="contrasena">Contraseña</label>
+                <input type="password" class="form-control" id="contrasena" placeholder="Ingresa tu contraseña" name="contrasena"  [(ngModel)]="password" required>
+              </div>
+
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary" >Registrarse</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</ng-template>

@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row mt-5 justify-content-center" *ngIf="vacancy">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header text-center" style="background-color: #F0F8FF;">
+          Información
+        </div>
+
+        <table class="table">
+          <tbody>
+            <tr>
+              <th scope="row">ID</th>
+              <td>{{vacancy.id}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Puesto</th>
+              <td>{{vacancy.jobName}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Empresa</th>
+              <td>{{vacancy.company}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Dirección</th>
+              <td>{{vacancy.location}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Modalidad</th>
+              <td>{{vacancy.modality}}</td>
+            </tr>
+            <tr>
+              <th scope="row">Descripción</th>
+              <td>{{vacancy.jobDescription}}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="card-footer d-flex justify-content-center" style="background-color: #F0F8FF;">
+          <button class="btn btn-primary btn-lg" style="background-color: #4835d4; color: #ffffff;" (click)="volver()">Volver</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

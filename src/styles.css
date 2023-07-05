@@ -1,0 +1,221 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.text-center{
+  text-align: center;
+}
+.container-main {
+  background-color: #F0F8FF;
+  padding: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.navbar-custom {
+  height: 60px; /* Ajusta el valor según lo gruesa que quieras la barra */
+  line-height: 60px;
+}
+
+.profile-image {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-image img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+}
+
+.breadcrumbs {
+  padding: 15px 0;
+  background: #4835d4;
+  min-height: 40px;
+  margin-top: 1px;
+}
+
+.breadcrumbs h2 {
+  font-size: 26px;
+  font-weight: 300;
+  color: #fff;
+}
+
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+}
+
+.breadcrumbs ol a {
+  color: #fff;
+}
+
+.breadcrumbs ol li+li {
+  padding-left: 10px;
+}
+
+.breadcrumbs ol li+li::before {
+  display: inline-block;
+  padding-right: 10px;
+  color: #fff;
+  content: "/";
+}
+
+@media (max-width: 991px) {
+  .breadcrumbs {
+    margin-top: 58px;
+  }
+
+  .breadcrumbs .d-flex {
+    display: block !important;
+  }
+
+  .breadcrumbs ol {
+    display: block;
+  }
+
+  .breadcrumbs ol li {
+    display: inline-block;
+  }
+}
+
+.blog {
+  padding: 40px 0 20px 0;
+}
+
+.blog .entry {
+  padding: 30px;
+  margin-bottom: 60px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.blog .entry .entry-title {
+  font-size: 28px;
+  font-weight: bold;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.blog .entry .entry-title a {
+  color: #111;
+  transition: 0.3s;
+}
+
+.blog .entry .entry-title a:hover {
+  color: #4835d4;
+}
+
+.blog .entry .entry-meta {
+  margin-bottom: 15px;
+  color: #777777;
+}
+
+.blog .entry .entry-meta ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.blog .entry .entry-meta ul li+li {
+  padding-left: 20px;
+}
+
+.blog .entry .entry-meta i {
+  font-size: 16px;
+  margin-right: 8px;
+  line-height: 0;
+}
+
+.blog .entry .entry-meta a {
+  color: #847872;
+  font-size: 14px;
+  display: inline-block;
+  line-height: 1;
+}
+
+.blog .entry .entry-content p {
+  line-height: 24px;
+}
+
+.blog .entry .entry-content .read-more {
+  -moz-text-align-last: right;
+  text-align-last: right;
+}
+
+.blog .entry .entry-content .read-more a {
+  display: inline-block;
+  background: #4835d4;
+  color: #fff;
+  padding: 6px 20px;
+  transition: 0.3s;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.blog .entry .entry-content .read-more a:hover {
+  background: #4835d4;
+}
+
+.blog .entry .entry-content h3 {
+  font-size: 22px;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.blog .entry .entry-content blockquote {
+  overflow: hidden;
+  background-color: #fafafa;
+  padding: 60px;
+  position: relative;
+  text-align: center;
+  margin: 20px 0;
+}
+
+
+.blog .entry .entry-content blockquote:before {
+  content: "\201C";
+  font-family: Georgia, serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: #e0e0e0;
+  position: absolute;
+  top: -30px;
+  left: 30px;
+}
+
+.blog .entry .entry-content blockquote p {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.blog .entry .entry-content blockquote cite {
+  display: block;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #777777;
+}
+
+@media (max-width: 767px) {
+  .blog .entry .entry-content blockquote {
+    padding: 30px;
+  }
+
+  .blog .entry .entry-content blockquote:before {
+    font-size: 40px;
+    top: -20px;
+    left: 20px;
+  }
+}
+
+
